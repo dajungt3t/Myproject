@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* 전체 옵션 */
+* {
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Malgun gothic','Sans-Serif','Arial';
+	top: 20px;
+}
+a {
+	text-decoration: none;
+	color:#333;
+}
+
+/* 버튼 */
+.button {
+	width:100px;
+	height: 50px;
+    background-color: rgb(247, 159, 225);
+	border: none;
+	border-radius:10px;
+    color:#fff;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+/* 게시판 목록 */
+#board_list {
+	width: 900px;
+	position: relative;
+}
+.list_table {
+	margin-top: 20px;
+}
+.list_table thead th{
+	height: 40px;
+	border-top: 3px solid rgb(230, 140, 207);
+	border-bottom: 1px solid rgb(204, 204, 204);
+	font-weight: bold;
+	font-size: 17px;
+}
+.list_table tbody td{
+	text-align:center;
+	padding: 10px 0;
+	border-bottom: 1px solid rgb(204, 204, 204); height:20px;
+	font-size: 14px 
+}
+
+/* 게시판 내용보기 */
+#board_view {
+	width: 700px;
+	position: relative;
+}
+.view_table {
+	margin-top: 50px;
+	border-top: 3px solid rgb(230, 140, 207);
+	font-size: 17px;
+}
+.view_table td{	
+	padding: 10px 0;
+	border-bottom: 1px solid rgb(204, 204, 204); 
+	font-size: 14px;
+}
+
+/* 게시판 글쓰기 */
+#board_insert {
+	width: 700px;
+	position: relative;
+}
+.insert_table {
+	margin-top: 50px;
+	border-top: 3px solid rgb(230, 140, 207);
+	font-size: 17px;
+}
+.insert_table td{
+	text-align:left;
+	padding: 10px 0;
+	border-bottom: 1px solid rgb(204, 204, 204); 
+	font-size: 14px 
+}
+
+/* 게시판 수정하기 */
+#board_update {
+	width: 700px;
+	position: relative;
+}
+.update_table {
+	margin-top: 50px;
+	border-top: 3px solid rgb(230, 140, 207);
+	font-size: 17px;
+}
+.update_table td{
+	text-align:left;
+	padding: 10px 0;
+	border-bottom: 1px solid rgb(204, 204, 204); 
+	font-size: 14px 
+}
+
+/* 게시판 삭제하기 */
+#board_delete {
+	width: 700px;
+	position: relative;
+}
+.delete_table {
+	margin-top: 50px;
+	border-top: 3px solid rgb(230, 140, 207);
+	font-size: 17px;
+}
+.delete_table td{
+	text-align:left;
+	padding: 10px 0;
+	border-bottom: 1px solid rgb(204, 204, 204); 
+	font-size: 14px 
+}
