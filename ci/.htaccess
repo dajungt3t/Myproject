@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /ci
+
+	RewriteCond $1 !^(index\.php|images|captcha|data|include|css|js|uploads|robots\.txt)
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	# Rewrite all other URLs to index.php/URL
+	RewriteRule ^(.*)$ /ci/index.php/$1 [L] 
+</IfModule>
