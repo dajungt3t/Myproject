@@ -1,0 +1,61 @@
+*****Codeigniter Study*****
+
+1.판매관리 페이지 Table 정리
+
+	1.1 MEMBER (사용자)
+	
+		CREATE TABLE `MEMBER` (
+					 `member_no` INT NOT NULL AUTO_INCREMENT COMMENT '사용자 일련번호',
+					 `id` VARCHAR(20) NOT NULL COMMENT '아이디',
+					 `pw` VARCHAR(20) NOT NULL COMMENT '비밀번호',
+					 `name` VARCHAR(20) NOT NULL COMMENT '사용자명',
+					 `tel` VARCHAR(11) NULL COMMENT '전화번호',
+					 `level` TINYINT NULL COMMENT '등급(관리자=0, 회원=1)',
+		PRIMARY KEY (`member_no`)
+		)
+		COLLATE='utf8_general_ci'
+		ENGINE=InnoDB
+		;
+
+	1.2 GUBUN (제품 구분)
+		CREATE TABLE `GUBUN` (
+					 `gubun_no` INT NOT NULL AUTO_INCREMENT COMMENT '구분 일련번호',
+					 `name` VARCHAR(20) NOT NULL COMMENT '구분명',
+		PRIMARY KEY (`gubun_no`)
+		)
+		COLLATE='utf8_general_ci'
+		ENGINE=InnoDB
+		;
+
+	1.3 PRODUCT (제품)
+		CREATE TABLE `PRODUCT` (
+					 `product_no` INT NOT NULL AUTO_INCREMENT COMMENT '제품 일련번호',
+					 `gubun_no` INT NOT NULL COMMENT '구분 번호',
+					 `name` VARCHAR(50) NOT NULL COMMENT '제품명',
+					 `price` INT NOT NULL COMMENT '단가',
+					 `jaego` INT NOT NULL COMMENT '재고',
+					 `pic` VARCHAR(255) NULL COMMENT '사진',
+		PRIMARY KEY (`product_no`)
+		)
+		COLLATE='utf8_general_ci'
+		ENGINE=InnoDB
+		;
+
+	1.4 JANGBU (매입/ 매출 장부)
+		CREATE TABLE `JANGBU` (
+					 `jangbu_no` INT NOT NULL AUTO_INCREMENT COMMENT '장부 일련번호',
+					 `io` TINYINT NOT NULL COMMENT '0=매입/1=매출',
+					 `date` DATE NOT NULL COMMENT '날짜',
+					 `product_no` INT NOT NULL COMMENT '제품명',
+					 `price` INT NOT NULL COMMENT '단가',
+					 `numi` INT NOT NULL COMMENT '매입수량',
+					 `numo` INT NOT NULL COMMENT '매출수량',
+					 `cost` INT NOT NULL COMMENT '금액',
+					 `remark` VARCHAR(20) NULL COMMENT '비고',
+		PRIMARY KEY (`jangbu_no`)
+		)
+		COLLATE='utf8_general_ci'
+		ENGINE=InnoDB
+		;
+			
+				
